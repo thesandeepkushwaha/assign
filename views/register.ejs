@@ -1,0 +1,38 @@
+<%- include('header',{ title:'Sign Up' }); -%>
+
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form action="" method="POST">
+
+            <label for="firstName">First Name</label>
+            <input type="text" class="input" name="firstName" autocomplete="off" id="firstName"
+                placeholder="Enter your first name">
+
+            <label for="lastName">Last Name</label>
+            <input type="text" class="input" name="lastName" autocomplete="off" id="lastName"
+                placeholder="Enter your last name">
+
+
+            <label for="userEmail">Email</label>
+            <input type="email" class="input" name="userEmail" autocomplete="off" id="userEmail"
+                placeholder="Enter your email">
+
+            <label for="userPassword">Password</label>
+            <input type="password" class="input" name="userPassword" id="userPassword" placeholder="Enter new password">
+
+            <% if(typeof error !=='undefined' ){ %>
+                <div class="err-msg">
+                    <%= error %>
+                </div>
+                <% } %>
+                    <% if(typeof msg !=='undefined' ){ %>
+                        <div class="msg">
+                            <%= msg %>
+                        </div>
+                        <% } %>
+                            <input type="submit" value="SignUp">
+
+        </form>
+    </div>
+
+    <%- include('footer'); -%>
